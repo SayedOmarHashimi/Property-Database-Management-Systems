@@ -460,8 +460,9 @@
   }
 
   pre {
-    background: #1a2234;
-    border: 1px solid rgba(27,79,216,0.2);
+    background: #f5efe0;
+    color: #1a2234;
+    border: 1px solid var(--border);
     border-radius: 6px;
     padding: 16px;
     overflow-x: auto;
@@ -470,15 +471,15 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
-  .kw { color: #ff7b72; }
-  .fn { color: #d2a8ff; }
-  .str { color: #a5d6ff; }
-  .cm { color: #8899aa; font-style: italic; }
-  .tbl { color: #ffa657; }
+  .kw { color: #c0392b; }
+  .fn { color: #6f42c1; }
+  .str { color: #0550ae; }
+  .cm { color: #6a737d; font-style: italic; }
+  .tbl { color: #953800; }
 
   .result-table {
-    background: #1a2234;
-    border: 1px solid rgba(27,79,216,0.2);
+    background: #eee4cc;
+    border: 1px solid var(--border);
     border-radius: 6px;
     overflow: hidden;
     font-size: 11px;
@@ -487,23 +488,23 @@
   }
 
   .result-table th {
-    background: rgba(27,79,216,0.18);
-    color: #7ab4ff;
+    background: rgba(27,79,216,0.12);
+    color: var(--accent);
     padding: 8px 12px;
     text-align: left;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(27,79,216,0.2);
+    border-bottom: 1px solid var(--border);
     font-weight: 500;
   }
 
   .result-table td {
     padding: 7px 12px;
-    color: #d0dce8;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    color: var(--text);
+    border-bottom: 1px solid rgba(28,43,58,0.08);
   }
 
   .result-table tr:last-child td { border-bottom: none; }
-  .result-table tr:hover td { background: rgba(27,79,216,0.06); }
+  .result-table tr:hover td { background: rgba(27,79,216,0.05); }
 
   .status-badge {
     display: inline-block;
@@ -1162,7 +1163,7 @@
 <span class="kw">FROM</span> <span class="tbl">Lease</span>;</pre>
         <table class="result-table">
           <tr><th>TotalRentRevenue</th></tr>
-          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:#7ab4ff;">$23,100.00</td></tr>
+          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:var(--accent);">$23,100.00</td></tr>
         </table>
       </div>
     </div>
@@ -1233,7 +1234,7 @@
 <span class="kw">FROM</span> <span class="tbl">Lease</span>;</pre>
         <table class="result-table">
           <tr><th>AverageMonthlyRent</th></tr>
-          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:#ffa657;">$2,310.00</td></tr>
+          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:var(--highlight);">$2,310.00</td></tr>
         </table>
       </div>
     </div>
