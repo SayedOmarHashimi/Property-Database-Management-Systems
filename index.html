@@ -7,16 +7,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0e1a;
-    --surface: #111827;
-    --card: #161d2e;
-    --border: #1e2d45;
-    --accent: #00d4ff;
-    --accent2: #7c3aed;
-    --accent3: #10b981;
-    --text: #e2e8f0;
-    --muted: #64748b;
-    --highlight: #fbbf24;
+    --bg: #F7F0E0;
+    --surface: #EDE0C4;
+    --card: #E8D8B0;
+    --border: #C9B68A;
+    --accent: #1B4FD8;
+    --accent2: #1E3A8A;
+    --accent3: #2563EB;
+    --text: #1C2B3A;
+    --muted: #7A6A50;
+    --highlight: #B45309;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,8 +38,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(27,79,216,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,79,216,0.05) 1px, transparent 1px);
     background-size: 40px 40px;
     pointer-events: none;
     z-index: 0;
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px 48px;
-    background: rgba(10,14,26,0.85);
+    background: rgba(247,240,224,0.88);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
@@ -102,8 +102,8 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(0,212,255,0.08);
-    border: 1px solid rgba(0,212,255,0.2);
+    background: rgba(27,79,216,0.08);
+    border: 1px solid rgba(27,79,216,0.25);
     border-radius: 4px;
     padding: 6px 14px;
     font-size: 11px;
@@ -180,7 +180,7 @@
     width: 40%;
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
-    opacity: 0.3;
+    opacity: 0.2;
   }
 
   /* SECTIONS */
@@ -225,12 +225,12 @@
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    background: linear-gradient(180deg, rgba(22,29,46,0.6), rgba(17,24,39,0.4));
+    background: linear-gradient(180deg, rgba(232,216,176,0.8), rgba(237,224,196,0.6));
     border: 1px solid var(--border);
     border-radius: 14px;
     overflow: hidden;
     margin-bottom: 80px;
-    box-shadow: 0 20px 60px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03);
+    box-shadow: 0 20px 60px -20px rgba(27,79,216,0.12), inset 0 1px 0 rgba(255,255,255,0.4);
   }
 
   .stat-card {
@@ -256,7 +256,7 @@
   }
 
   .stat-card:hover {
-    background: rgba(0,212,255,0.04);
+    background: rgba(27,79,216,0.06);
   }
 
   .stat-num {
@@ -271,7 +271,7 @@
     height: 38px;
     white-space: nowrap;
     line-height: 1;
-    text-shadow: 0 0 24px rgba(0,212,255,0.25);
+    text-shadow: 0 0 24px rgba(27,79,216,0.2);
   }
 
   .stat-label {
@@ -315,17 +315,18 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   }
 
   .table-card:hover {
     border-color: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(27,79,216,0.12);
   }
 
   .table-header {
     padding: 12px 16px;
-    background: rgba(0,212,255,0.06);
+    background: rgba(27,79,216,0.07);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -354,7 +355,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 4px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(28,43,58,0.08);
     gap: 8px;
   }
 
@@ -385,8 +386,8 @@
     flex-shrink: 0;
   }
 
-  .badge-pk { background: rgba(251,191,36,0.15); color: var(--highlight); }
-  .badge-fk { background: rgba(124,58,237,0.15); color: #a78bfa; }
+  .badge-pk { background: rgba(180,83,9,0.12); color: var(--highlight); }
+  .badge-fk { background: rgba(27,79,216,0.12); color: var(--accent); }
 
   /* SQL QUERIES */
   .queries-list {
@@ -404,7 +405,7 @@
 
   .query-header {
     padding: 14px 20px;
-    background: rgba(255,255,255,0.02);
+    background: rgba(27,79,216,0.04);
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -416,8 +417,8 @@
     font-size: 12px;
     font-weight: 700;
     color: var(--accent);
-    background: rgba(0,212,255,0.08);
-    border: 1px solid rgba(0,212,255,0.2);
+    background: rgba(27,79,216,0.1);
+    border: 1px solid rgba(27,79,216,0.25);
     border-radius: 4px;
     padding: 3px 10px;
     flex-shrink: 0;
@@ -441,11 +442,11 @@
     flex-shrink: 0;
   }
 
-  .tag-agg { color: var(--accent3); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.06); }
-  .tag-filter { color: #60a5fa; border-color: rgba(96,165,250,0.3); background: rgba(96,165,250,0.06); }
-  .tag-join { color: #f472b6; border-color: rgba(244,114,182,0.3); background: rgba(244,114,182,0.06); }
-  .tag-trigger { color: var(--highlight); border-color: rgba(251,191,36,0.3); background: rgba(251,191,36,0.06); }
-  .tag-proc { color: #a78bfa; border-color: rgba(167,139,250,0.3); background: rgba(167,139,250,0.06); }
+  .tag-agg { color: #0369a1; border-color: rgba(3,105,161,0.3); background: rgba(3,105,161,0.07); }
+  .tag-filter { color: #1d4ed8; border-color: rgba(29,78,216,0.3); background: rgba(29,78,216,0.06); }
+  .tag-join { color: #9333ea; border-color: rgba(147,51,234,0.3); background: rgba(147,51,234,0.06); }
+  .tag-trigger { color: var(--highlight); border-color: rgba(180,83,9,0.3); background: rgba(180,83,9,0.06); }
+  .tag-proc { color: #0891b2; border-color: rgba(8,145,178,0.3); background: rgba(8,145,178,0.06); }
 
   .query-body {
     padding: 20px;
@@ -459,8 +460,8 @@
   }
 
   pre {
-    background: #0d1117;
-    border: 1px solid var(--border);
+    background: #1a2234;
+    border: 1px solid rgba(27,79,216,0.2);
     border-radius: 6px;
     padding: 16px;
     overflow-x: auto;
@@ -472,12 +473,12 @@
   .kw { color: #ff7b72; }
   .fn { color: #d2a8ff; }
   .str { color: #a5d6ff; }
-  .cm { color: var(--muted); font-style: italic; }
+  .cm { color: #8899aa; font-style: italic; }
   .tbl { color: #ffa657; }
 
   .result-table {
-    background: #0d1117;
-    border: 1px solid var(--border);
+    background: #1a2234;
+    border: 1px solid rgba(27,79,216,0.2);
     border-radius: 6px;
     overflow: hidden;
     font-size: 11px;
@@ -486,23 +487,23 @@
   }
 
   .result-table th {
-    background: rgba(0,212,255,0.08);
-    color: var(--accent);
+    background: rgba(27,79,216,0.18);
+    color: #7ab4ff;
     padding: 8px 12px;
     text-align: left;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(27,79,216,0.2);
     font-weight: 500;
   }
 
   .result-table td {
     padding: 7px 12px;
-    color: var(--text);
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: #d0dce8;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
   .result-table tr:last-child td { border-bottom: none; }
-  .result-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .result-table tr:hover td { background: rgba(27,79,216,0.06); }
 
   .status-badge {
     display: inline-block;
@@ -512,12 +513,12 @@
     font-weight: 600;
   }
 
-  .status-pending { background: rgba(251,191,36,0.15); color: var(--highlight); }
-  .status-completed { background: rgba(16,185,129,0.15); color: var(--accent3); }
-  .status-active { background: rgba(0,212,255,0.15); color: var(--accent); }
-  .status-expired { background: rgba(100,116,139,0.2); color: var(--muted); }
-  .status-vacant { background: rgba(124,58,237,0.15); color: #a78bfa; }
-  .status-occupied { background: rgba(16,185,129,0.15); color: var(--accent3); }
+  .status-pending { background: rgba(180,83,9,0.15); color: var(--highlight); }
+  .status-completed { background: rgba(3,105,161,0.15); color: #0369a1; }
+  .status-active { background: rgba(27,79,216,0.15); color: var(--accent); }
+  .status-expired { background: rgba(122,106,80,0.2); color: var(--muted); }
+  .status-vacant { background: rgba(147,51,234,0.12); color: #9333ea; }
+  .status-occupied { background: rgba(3,105,161,0.12); color: #0369a1; }
 
   /* TRIGGERS & PROCEDURES */
   .adv-grid {
@@ -549,8 +550,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--accent);
-    border: 1px solid rgba(0,212,255,0.3);
-    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(27,79,216,0.3);
+    background: rgba(27,79,216,0.08);
     border-radius: 4px;
     padding: 4px 9px;
     font-family: 'JetBrains Mono', monospace;
@@ -589,11 +590,11 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
     min-width: 200px;
   }
 
-  .team-card:hover { border-color: var(--accent); }
+  .team-card:hover { border-color: var(--accent); box-shadow: 0 4px 16px rgba(27,79,216,0.1); }
 
   .team-avatar {
     width: 40px; height: 40px;
@@ -662,21 +663,83 @@
     50% { opacity: 0.4; }
   }
 
-  .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+  @keyframes slideLeft {
+    from { opacity: 0; transform: translateX(-32px); }
+    to   { opacity: 1; transform: translateX(0); }
   }
 
-  .fade-in.visible {
+  @keyframes slideRight {
+    from { opacity: 0; transform: translateX(32px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.93); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* Base scroll-reveal states */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-36px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(36px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .fade-in.visible,
+  .slide-in-left.visible,
+  .slide-in-right.visible,
+  .scale-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Staggered children for grids */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+  }
+
+  .stagger-children.visible > *:nth-child(1)  { transition-delay: 0.00s; }
+  .stagger-children.visible > *:nth-child(2)  { transition-delay: 0.07s; }
+  .stagger-children.visible > *:nth-child(3)  { transition-delay: 0.14s; }
+  .stagger-children.visible > *:nth-child(4)  { transition-delay: 0.21s; }
+  .stagger-children.visible > *:nth-child(5)  { transition-delay: 0.28s; }
+  .stagger-children.visible > *:nth-child(6)  { transition-delay: 0.35s; }
+  .stagger-children.visible > *:nth-child(7)  { transition-delay: 0.42s; }
+  .stagger-children.visible > *:nth-child(8)  { transition-delay: 0.49s; }
+  .stagger-children.visible > *:nth-child(9)  { transition-delay: 0.56s; }
+  .stagger-children.visible > *:nth-child(10) { transition-delay: 0.63s; }
+  .stagger-children.visible > *:nth-child(11) { transition-delay: 0.70s; }
+  .stagger-children.visible > *:nth-child(12) { transition-delay: 0.77s; }
+
+  .stagger-children.visible > * {
     opacity: 1;
     transform: translateY(0);
   }
 
   /* ENTITY SECTION */
   .entity-section {
-    background: rgba(0,212,255,0.03);
-    border: 1px solid rgba(0,212,255,0.1);
+    background: rgba(27,79,216,0.04);
+    border: 1px solid rgba(27,79,216,0.15);
     border-radius: 8px;
     padding: 24px;
     margin-bottom: 24px;
@@ -709,18 +772,19 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 24px;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
   }
 
   .rw-card:hover {
     border-color: var(--accent3);
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(27,79,216,0.1);
   }
 
   .rw-icon {
     width: 32px;
     height: 3px;
-    background: var(--accent3);
+    background: var(--accent);
     border-radius: 2px;
     margin-bottom: 18px;
     display: block;
@@ -797,7 +861,7 @@
 
 <!-- STATS -->
 <section>
-  <div class="stats-grid fade-in">
+  <div class="stats-grid stagger-children">
     <div class="stat-card">
       <span class="stat-num">10</span>
       <span class="stat-label">Buildings</span>
@@ -829,10 +893,10 @@
 
 <!-- SCHEMA -->
 <section id="schema">
-  <div class="section-tag">01 — Database Schema</div>
-  <h2 class="section-title">Entity Relationship Design</h2>
+  <div class="section-tag slide-in-left">01 — Database Schema</div>
+  <h2 class="section-title slide-in-left">Entity Relationship Design</h2>
 
-  <div class="schema-grid fade-in">
+  <div class="schema-grid stagger-children">
 
     <div class="table-card">
       <div class="table-header">
@@ -972,9 +1036,9 @@
       </div>
     </div>
 
-    <div class="table-card" style="border-color: rgba(0,212,255,0.3);">
-      <div class="table-header" style="background: rgba(0,212,255,0.08);">
-        <div class="table-icon" style="background:#00d4ff"></div>
+    <div class="table-card" style="border-color: rgba(27,79,216,0.35);">
+      <div class="table-header" style="background: rgba(27,79,216,0.1);">
+        <div class="table-icon" style="background:#1B4FD8"></div>
         <span class="table-name">Service</span>
         <span style="margin-left:auto;font-size:9px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;">New</span>
       </div>
@@ -987,9 +1051,9 @@
       </div>
     </div>
 
-    <div class="table-card" style="border-color: rgba(0,212,255,0.3);">
-      <div class="table-header" style="background: rgba(0,212,255,0.08);">
-        <div class="table-icon" style="background:#00d4ff"></div>
+    <div class="table-card" style="border-color: rgba(27,79,216,0.35);">
+      <div class="table-header" style="background: rgba(27,79,216,0.1);">
+        <div class="table-icon" style="background:#1B4FD8"></div>
         <span class="table-name">ParkingPermit</span>
         <span style="margin-left:auto;font-size:9px;color:var(--accent);letter-spacing:1px;text-transform:uppercase;">New</span>
       </div>
@@ -1013,13 +1077,13 @@
 
 <!-- QUERIES -->
 <section id="queries">
-  <div class="section-tag">02 — Business Queries</div>
-  <h2 class="section-title">SQL Questions & Results</h2>
+  <div class="section-tag slide-in-left">02 — Business Queries</div>
+  <h2 class="section-title slide-in-left">SQL Questions & Results</h2>
 
   <div class="queries-list">
 
     <!-- Q1 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-left">
       <div class="query-header">
         <span class="query-num">Q1</span>
         <span class="query-title">Show all apartments that are vacant</span>
@@ -1041,7 +1105,7 @@
     </div>
 
     <!-- Q2 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-right">
       <div class="query-header">
         <span class="query-num">Q2</span>
         <span class="query-title">Total apartments per building</span>
@@ -1064,7 +1128,7 @@
     </div>
 
     <!-- Q3 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-left">
       <div class="query-header">
         <span class="query-num">Q3</span>
         <span class="query-title">All pending inspections</span>
@@ -1086,7 +1150,7 @@
     </div>
 
     <!-- Q5 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-right">
       <div class="query-header">
         <span class="query-num">Q5</span>
         <span class="query-title">Total rent revenue from all leases</span>
@@ -1098,13 +1162,13 @@
 <span class="kw">FROM</span> <span class="tbl">Lease</span>;</pre>
         <table class="result-table">
           <tr><th>TotalRentRevenue</th></tr>
-          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:var(--accent3);">$23,100.00</td></tr>
+          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:#7ab4ff;">$23,100.00</td></tr>
         </table>
       </div>
     </div>
 
     <!-- Q7 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-left">
       <div class="query-header">
         <span class="query-num">Q7</span>
         <span class="query-title">Staff members and apartments they clean</span>
@@ -1129,7 +1193,7 @@
     </div>
 
     <!-- Q8 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-right">
       <div class="query-header">
         <span class="query-num">Q8</span>
         <span class="query-title">Corporate clients and their lease count</span>
@@ -1156,7 +1220,7 @@
     </div>
 
     <!-- Q9 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-left">
       <div class="query-header">
         <span class="query-num">Q9</span>
         <span class="query-title">Average monthly rent across all leases</span>
@@ -1169,13 +1233,13 @@
 <span class="kw">FROM</span> <span class="tbl">Lease</span>;</pre>
         <table class="result-table">
           <tr><th>AverageMonthlyRent</th></tr>
-          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:var(--highlight);">$2,310.00</td></tr>
+          <tr><td style="font-size:18px;font-family:'Syne',sans-serif;font-weight:700;color:#ffa657;">$2,310.00</td></tr>
         </table>
       </div>
     </div>
 
     <!-- Q10 -->
-    <div class="query-card fade-in">
+    <div class="query-card slide-in-right">
       <div class="query-header">
         <span class="query-num">Q10</span>
         <span class="query-title">Most recent inspection per building</span>
@@ -1205,12 +1269,12 @@
 
 <!-- ADVANCED -->
 <section id="advanced">
-  <div class="section-tag">03 — Advanced SQL</div>
-  <h2 class="section-title">Triggers, Constraints & Stored Procedure</h2>
+  <div class="section-tag slide-in-left">03 — Advanced SQL</div>
+  <h2 class="section-title slide-in-left">Triggers, Constraints & Stored Procedure</h2>
 
-  <div class="adv-grid">
+  <div class="adv-grid stagger-children">
 
-    <div class="adv-card fade-in">
+    <div class="adv-card">
       <div class="adv-header">
         <span class="adv-icon">Trigger</span>
         <div>
@@ -1231,7 +1295,7 @@
       </div>
     </div>
 
-    <div class="adv-card fade-in">
+    <div class="adv-card">
       <div class="adv-header">
         <span class="adv-icon">Trigger</span>
         <div>
@@ -1255,7 +1319,7 @@
       </div>
     </div>
 
-    <div class="adv-card fade-in">
+    <div class="adv-card">
       <div class="adv-header">
         <span class="adv-icon">Procedure</span>
         <div>
@@ -1287,7 +1351,7 @@
       </div>
     </div>
 
-    <div class="adv-card fade-in">
+    <div class="adv-card">
       <div class="adv-header">
         <span class="adv-icon">Constraint</span>
         <div>
@@ -1324,10 +1388,10 @@
 
 <!-- NEW ENTITIES -->
 <section id="entities">
-  <div class="section-tag">04 — Extended Schema</div>
-  <h2 class="section-title">New Entities: Service & ParkingPermit</h2>
+  <div class="section-tag slide-in-left">04 — Extended Schema</div>
+  <h2 class="section-title slide-in-left">New Entities: Service & ParkingPermit</h2>
 
-  <div class="entity-section fade-in">
+  <div class="entity-section slide-in-left">
     <div class="entity-title">Service</div>
     <div class="entity-desc">Tracks additional services requested by corporate clients — from IT support to cleaning and security audits. Enables revenue tracking by service category.</div>
     <div class="query-body" style="padding:0;gap:16px;display:grid;grid-template-columns:1fr 1fr;">
@@ -1351,7 +1415,7 @@
     </div>
   </div>
 
-  <div class="entity-section fade-in">
+  <div class="entity-section slide-in-right">
     <div class="entity-title">ParkingPermit</div>
     <div class="entity-desc">Tracks parking permit assignments to corporate clients, including permit status (Active/Expired) and validity dates — enabling management of parking access control.</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
@@ -1381,35 +1445,35 @@
 
 <!-- REAL WORLD -->
 <section>
-  <div class="section-tag">05 — Real World Impact</div>
-  <h2 class="section-title">Why This Database Matters</h2>
-  <div class="rw-grid">
-    <div class="rw-card fade-in">
+  <div class="section-tag slide-in-left">05 — Real World Impact</div>
+  <h2 class="section-title slide-in-left">Why This Database Matters</h2>
+  <div class="rw-grid stagger-children">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Property Management Firms</div>
       <div class="rw-desc">Companies like CBRE and JLL use relational databases structurally identical to this to track thousands of leases, inspections, and maintenance tickets across their portfolios.</div>
     </div>
-    <div class="rw-card fade-in">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Compliance & Safety</div>
       <div class="rw-desc">Tracking inspection statuses and scheduled follow-up dates is legally required in most jurisdictions. Our Inspection table mirrors this real-world compliance workflow.</div>
     </div>
-    <div class="rw-card fade-in">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Revenue Analytics</div>
       <div class="rw-desc">The Lease + CorpClient structure enables instant revenue reporting — critical for financial planning. Our queries return $23,100/month in combined lease revenue instantly.</div>
     </div>
-    <div class="rw-card fade-in">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Automated Operations</div>
       <div class="rw-desc">Our stored procedure mirrors how modern PropTech platforms auto-dispatch maintenance workers, reducing manual assignment overhead and improving response times.</div>
     </div>
-    <div class="rw-card fade-in">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Trigger-Based Automation</div>
       <div class="rw-desc">Database triggers that auto-update occupancy status on lease changes are foundational to enterprise systems — eliminating human error in status tracking.</div>
     </div>
-    <div class="rw-card fade-in">
+    <div class="rw-card">
       <span class="rw-icon"></span>
       <div class="rw-title">Scalable Entity Design</div>
       <div class="rw-desc">Adding ParkingPermit and Service entities demonstrates how a normalized schema grows with business needs — no restructuring required, just new tables and foreign keys.</div>
@@ -1421,10 +1485,10 @@
 
 <!-- AUTHOR -->
 <section id="team">
-  <div class="section-tag">06 — Author</div>
-  <h2 class="section-title">Created By</h2>
+  <div class="section-tag slide-in-left">06 — Author</div>
+  <h2 class="section-title slide-in-left">Created By</h2>
   <div class="team-grid">
-    <div class="team-card fade-in">
+    <div class="team-card scale-in">
       <div class="team-avatar">SH</div>
       <div><div class="team-name">Sayed Hashimi</div><div class="team-role">MIS 150</div></div>
     </div>
@@ -1443,19 +1507,19 @@
 </footer>
 
 <script>
-  // Intersection Observer for fade-in
+  // Intersection Observer for scroll animations
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 60);
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll(
+    '.fade-in, .slide-in-left, .slide-in-right, .scale-in, .stagger-children'
+  ).forEach(el => observer.observe(el));
 
   // Smooth active nav
   const sections = document.querySelectorAll('section[id]');
