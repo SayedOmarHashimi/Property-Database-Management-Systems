@@ -461,7 +461,7 @@
 
   pre {
     background: #1a2234;
-    color: #e8eef4;
+    color: #e8eef4 !important;
     border: 1px solid rgba(27,79,216,0.2);
     border-radius: 6px;
     padding: 16px;
@@ -471,11 +471,13 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
-  .kw { color: #ff7b72; }
-  .fn { color: #d2a8ff; }
-  .str { color: #a5d6ff; }
-  .cm { color: #8899aa; font-style: italic; }
-  .tbl { color: #ffa657; }
+  pre, pre * { color: #e8eef4; }
+
+  .kw { color: #ff7b72 !important; }
+  .fn { color: #d2a8ff !important; }
+  .str { color: #a5d6ff !important; }
+  .cm { color: #8899aa !important; font-style: italic; }
+  .tbl { color: #ffa657 !important; }
 
   .result-table {
     background: #1a2234;
